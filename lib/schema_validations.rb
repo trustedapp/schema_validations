@@ -1,9 +1,12 @@
 require 'valuable'
 
-require 'schema_plus_columns'
+require 'schema_monkey'
 require 'schema_validations/version'
+require 'schema_validations/active_record/connection_adapters/column'
+require 'schema_validations/active_record/base'
 require 'schema_validations/active_record/validations'
 require 'schema_validations/active_record/type'
+require 'schema_validations/middleware/model'
 
 module SchemaValidations
 
