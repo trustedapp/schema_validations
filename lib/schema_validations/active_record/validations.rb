@@ -135,14 +135,14 @@ module SchemaValidations
         def load_integer_column_validations(name, column) # :nodoc:
           options = { :allow_nil => true, :only_integer => true }
 
-          if range = column.cast_type.try(:range)
-            options[:greater_than_or_equal_to] = range.begin
-            if range.exclude_end?
-              options[:less_than] = range.end
-            else
-              options[:less_than_or_equal_to] = range.end
-            end
-          end
+          #if range = column.cast_type.try(:range)
+            #options[:greater_than_or_equal_to] = range.begin
+            #if range.exclude_end?
+              #options[:less_than] = range.end
+            #else
+              #options[:less_than_or_equal_to] = range.end
+            #end
+          #end
 
           validate_logged :validates_numericality_of, name, options
         end
